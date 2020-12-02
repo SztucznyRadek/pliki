@@ -12,6 +12,10 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import absolute_import
 
+from absl import app
+from absl import flags
+from absl import logging
+
 import os
 import io
 import pandas as pd
@@ -24,7 +28,7 @@ from PIL import Image
 from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
 
-flags = tf.app.flags
+flags = app.flags
 flags.DEFINE_string("csv_input", "", "Path to the CSV input")
 flags.DEFINE_string("output_path", "", "Path to output TFRecord")
 flags.DEFINE_string(
